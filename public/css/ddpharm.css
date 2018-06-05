@@ -1,0 +1,47 @@
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    padding-top: 45px;
+}
+
+body > .container {
+    width: 95%;
+}
+
+.row {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.service {
+    text-align: center;
+}
+
+.promo > ul {
+    list-style-type: none;
+}
+
+.promo {
+    text-align: center;
+}
+
+.icon {
+    font-size: 3em;
+}
