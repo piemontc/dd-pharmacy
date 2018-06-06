@@ -1,10 +1,10 @@
 <h1> {{ notHome }}</h1>
 
 <!-- promos -->
-<div class="row">
+<div class="row justify-content-center">
     <h1 class="title">{{ promos.title }}</h1>
 </div>
-<div class="row">
+<div class="row justify-content-center">
     <h2 class="slogan">{{ promos.slogan }}</h2>
 </div>
 
@@ -27,33 +27,42 @@
 </div>
 
 <!-- services -->
-<div class="row">
+<div class="row justify-content-center">
     <h1 class="title">{{ services.title }}</h1>
 </div>
-<div class="row">
+<div class="row justify-content-center">
     <h2 class="slogan">{{ services.slogan }}</h2>
 </div>
 
+
 <div class="row">
 
-    <div class="col-md-3 col-sm-6 service">
-        <h2>{{ services.content[0].name }}</h2>
-        <p class="icon"><i class="{{ services.content[0].icon }}"></i></p>
+    <div class="col-lg-3 col-md-6 service">
+        <div class="inner-card">
+            <h2>{{ services.content[0].name }}</h2>
+            <p class="icon"><i class="{{ services.content[0].icon }}"></i></p>
+        </div>
     </div>
-    
-    <div class="col-md-3 col-sm-6 service">
-        <h2>{{ services.content[1].name }}</h2>
-        <p class="icon"><i class="{{ services.content[1].icon }}"></i></p>
+
+    <div class="col-lg-3 col-md-6 service">
+        <div class="inner-card">
+            <h2>{{ services.content[1].name }}</h2>
+            <p class="icon"><i class="{{ services.content[1].icon }}"></i></p>
+        </div>
     </div>
-    
-    <div class="col-md-3 col-sm-6 service">
-        <h2>{{ services.content[2].name }}</h2>
-        <p class="icon"><i class="{{ services.content[2].icon }}"></i></p>
+
+    <div class="col-lg-3 col-md-6 service">
+        <div class="inner-card">
+            <h2>{{ services.content[2].name }}</h2>
+            <p class="icon"><i class="{{ services.content[2].icon }}"></i></p>
+        </div>
     </div>
-    
-    <div class="col-md-3 col-sm-6 service">
-        <h2>{{ services.content[3].name }}</h2>
-        <p class="icon"><i class="{{ services.content[3].icon }}"></i></p>
+
+    <div class="col-lg-3 col-md-6 service">
+        <div class="inner-card">
+            <h2>{{ services.content[3].name }}</h2>
+            <p class="icon"><i class="{{ services.content[3].icon }}"></i></p>
+        </div>
     </div>
-    
+
 </div>
