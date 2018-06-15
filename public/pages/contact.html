@@ -1,5 +1,36 @@
-<div class="row justify-content-center">
-    <div class="col-md-7">
+<div class="container" style="margin-top: 5%">
+    <md-card class="contact-form">
+        <md-content layout-padding>
+            <div>
+                <h1>Contact Us</h1>
+                <md-content class="md-no-momentum">
+                    <md-input-container class="md-block">
+                        <!-- Use floating label instead of placeholder -->
+                        <label>Name</label>
+                        <md-icon class="name"><i class="fas fa-user"></i></md-icon>
+                        <input ng-model="user.name" type="text">
+                    </md-input-container>
+
+                    <md-input-container class="md-block">
+                        <md-icon><i class="fas fa-phone"></i></md-icon>
+                        <input ng-model="user.phone" type="text" placeholder="Phone Number">
+                    </md-input-container>
+
+                    <md-input-container class="md-block">
+                        <!-- Use floating placeholder instead of label -->
+                        <md-icon class="email"><i class="fas fa-envelope-open"></i></md-icon>
+                        <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+                    </md-input-container>
+
+                    <md-input-container class="md-block">
+                        <label>Message</label>
+                        <textarea ng-model="user.biography" md-maxlength="350" rows="5" md-select-on-focus ng-required="true"></textarea>
+                    </md-input-container>
+                </md-content>
+            </div>
+        </md-content>
+    </md-card>
+    <!--<div class="col-md-7">
         <form action="{{ 'https://www.enformed.io/YOUR_TOKEN' + token }}">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -17,5 +48,5 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-    </div>
+    </div>-->
 </div>
