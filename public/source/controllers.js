@@ -24,5 +24,9 @@ app.controller('mainController', ['$scope', '$location', 'Promos', 'Services', f
                 Services.service4
             ]
     };
-    
+
+}]);
+
+app.controller('navController', ['$scope', function($scope) {
+    $scope.currentNavItem = 'home';
 }]);

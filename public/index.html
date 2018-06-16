@@ -15,7 +15,30 @@
     </head>
     
     <body>
-        
+
+    <div ng-controler="navController" ng-cloak>
+        <md-toolbar class="md-tall">
+            <div layout="row" flex layout-align="center center">
+                <div layout="column" layout-align="center center" flex hide-xs>Address</div>
+                <div layout="column" layout-align="center center" flex><img src="img/D&D4.png" id="nav-logo"></div>
+                <div layout="column" layout-align="center center" flex hide-xs>Contact</div>
+            </div>
+        </md-toolbar>
+        <md-nav-bar
+                md-selected-nav-item="$navController.currentNavItem"
+                nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-href="#" name="home">
+                Home
+            </md-nav-item>
+            <md-nav-item md-nav-href="#!/services" name="services">
+                Services
+            </md-nav-item>
+            <md-nav-item md-nav-href="#!/contact" name="contact">
+                Contact
+            </md-nav-item>
+        </md-nav-bar>
+    </div>
+
         <div class="container">
             
             <div ng-view ng-cloak></div>
