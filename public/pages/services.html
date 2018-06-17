@@ -1,6 +1,22 @@
-<div class="row">
-    <h1>In services</h1>
-</div>
+<div class="container" style="padding-top: 20px">
+        <div class="row" style="padding-top: 0px">
+            <div class="col-lg-6" ng-repeat="service in services.content">
+                <md-card>
+                    <md-toolbar class="md-primary" layout-padding layout-align="center center" id="serviceBar">
+                        <h2>{{ service.name }}</h2>
+                    </md-toolbar>
+                    <md-content layout-padding id="serviceContent">
 
-<h1>{{ page }}</h1>
-<h1>{{ notHome }}</h1>
+                        <md-list>
+                            <md-list-item class="md-3-line md-long-text" ng-repeat="details in service.details" ng-click="null">
+                                <div class="md-list-item-text" layout="column">
+                                    <p>{{ details }}</p>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+
+                    </md-content>
+                </md-card>
+            </div>
+        </div>
+</div>

@@ -25,8 +25,20 @@ app.controller('mainController', ['$scope', '$location', 'Promos', 'Services', f
             ]
     };
 
-}]);
+    /*
+        Handle nav inkbar
+     */
+    $scope.currentPage = getPage();
+    function getPage() {
+        $scope.location = $location.path();
 
-app.controller('navController', ['$scope', function($scope) {
-    $scope.currentNavItem = 'home';
+        if ($scope.location == '/') {
+            return 'home';
+        } else if ($scope.location == '/services') {
+            return 'services';
+        } else if ($scope.location == '/contact') {
+            return 'contact';
+        }
+    }
+
 }]);

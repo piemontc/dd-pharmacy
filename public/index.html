@@ -10,36 +10,46 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
-
-        <link rel="stylesheet" href="css/ddpharm.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="styles/ddpharm.css" type="text/css" />
     </head>
     
     <body>
 
-    <div ng-controler="navController" ng-cloak>
-        <md-toolbar class="md-tall">
-            <div layout="row" flex layout-align="center center">
-                <div layout="column" layout-align="center center" flex hide-xs>Address</div>
-                <div layout="column" layout-align="center center" flex><img src="img/D&D4.png" id="nav-logo"></div>
-                <div layout="column" layout-align="center center" flex hide-xs>Contact</div>
-            </div>
-        </md-toolbar>
-        <md-nav-bar
-                md-selected-nav-item="$navController.currentNavItem"
-                nav-bar-aria-label="navigation links">
-            <md-nav-item md-nav-href="#" name="home">
-                Home
-            </md-nav-item>
-            <md-nav-item md-nav-href="#!/services" name="services">
-                Services
-            </md-nav-item>
-            <md-nav-item md-nav-href="#!/contact" name="contact">
-                Contact
-            </md-nav-item>
-        </md-nav-bar>
-    </div>
+        <div ng-controller="mainController" ng-cloak>
+            <md-toolbar class="md-tall">
+                <br />
+                <div layout="row" flex layout-align="center center">
+                    <div layout="column" layout-align="center center" flex hide-xs>
+                        <div layout="row"><i class="material-icons header-icon">location_on</i></div>
+                        <div layout="row" flex>1234 Main St</div>
+                        <div layout="row" flex>Charlotte, NC 28111</div>
+                    </div>
+                    <div layout="column" layout-align="center center" flex><img src="img/D&D4.png" id="nav-logo"></div>
+                    <div layout="column" layout-align="center center" flex hide-xs>
+                        <div layout="row"><i class="material-icons header-icon">email</i></div>
+                        <div layout="row" flex>Phone Number</div>
+                        <div layout="row" flex>Email Address</div>
+                    </div>
+                </div>
+            </md-toolbar>
+            <md-nav-bar
+                    md-selected-nav-item="currentPage"
+                    nav-bar-aria-label="navigation links">
+                <md-nav-item md-nav-href="#" name="home">
+                    Home
+                </md-nav-item>
+                <md-nav-item md-nav-href="#!/services" name="services">
+                    Services
+                </md-nav-item>
+                <md-nav-item md-nav-href="#!/contact" name="contact">
+                    Contact
+                </md-nav-item>
+            </md-nav-bar>
+        </div>
 
-        <div class="container">
+        <div class="container-fluid" id="mainContent">
             
             <div ng-view ng-cloak></div>
             
@@ -69,7 +79,7 @@
         <script type="text/javascript" src="source/directives/services.js"></script> -->
         <script type="text/javascript" src="source/controllers.js"></script>
 
-        <script type="text/javascript" src="css/ddpharm.js"></script>
+        <script type="text/javascript" src="styles/ddpharm.js"></script>
     </body>
     
 </html>

@@ -1,38 +1,56 @@
-<!-- first row : specials -->
-<div class="row">
-
-    <!-- Special 1 -->
-    <div class="col-md-6">
-        <md-card class="promo-row-card">Special 1</md-card>
-    </div>
-
-    <!-- Special 2 -->
-    <div class="col-md-6">
-        <md-card class="promo-row-card">Special 2</md-card>
-    </div>
+<!-- Header image -->
+<div layout="row" ng-cloak flex>
+    <a href="#" class="img-shadow"><img id="headerImage" src="img/dd_pills2.png"></a>
 </div>
 
-<!-- second row : services -->
-<div class="row">
-    <!-- Service 1 -->
-    <div class="col-lg-3 col-md-6" ng-repeat="service in services.content">
-        <md-card class="service-row-card" md-whiteframe="{{ height }}" ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
-            <h3>{{ service.name }}</h3>
-            <p class="icon"><i class="{{ service.icon }}"></i></p>
-        </md-card>
+<div class="container">
+    <!-- first row : specials -->
+    <div class="row">
+        <div layout="row" layout-align="center center" flex="100"><h1>{{ promos.title }}</h1></div>
+        <div layout="row" layout-align="center center" flex="100"><h2>{{ promos.slogan }}</h2></div>
     </div>
-</div>
+    <div class="row">
 
-<!-- third row : nav / hours -->
-<div class="row">
+        <!-- Special 1 -->
+        <div class="col-md-6">
+            <md-card class="promo-row-card">Special 1</md-card>
+        </div>
 
-    <!-- map -->
-    <div class="col-md-6">
-        <md-card class="map-row-card">Map Here</md-card>
+        <!-- Special 2 -->
+        <div class="col-md-6">
+            <md-card class="promo-row-card">Special 2</md-card>
+        </div>
     </div>
 
-    <!-- hours -->
-    <div class="col-md-6">
-        <md-card class="map-row-card">Hours Here</md-card>
+    <!-- second row : services -->
+    <div class="row">
+        <div layout="row" layout-align="center center" flex="100"><h1>{{ services.title }}</h1></div>
+        <div layout="row" layout-align="center center" flex="100"><h2>{{ services.slogan }}</h2></div>
+    </div>
+    <div class="row">
+        <!-- Service 1 -->
+        <div class="col-lg-3 col-md-6" ng-repeat="service in services.content">
+            <md-card class="service-row-card" md-whiteframe="{{ height }}" ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
+                <h3>{{ service.name }}</h3>
+                <p class="icon"><i class="{{ service.icon }}"></i></p>
+            </md-card>
+        </div>
+    </div>
+
+    <!-- third row : nav / hours -->
+    <div class="row">
+        <div layout="row" layout-align="center center" flex="100"><h1>Directions & Hours</h1></div>
+    </div>
+    <div class="row">
+
+        <!-- map -->
+        <div class="col-md-6">
+            <md-card class="map-row-card">Map Here</md-card>
+        </div>
+
+        <!-- hours -->
+        <div class="col-md-6">
+            <md-card class="map-row-card">Hours Here</md-card>
+        </div>
     </div>
 </div>

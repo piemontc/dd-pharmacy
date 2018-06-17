@@ -7,13 +7,57 @@ body {
     height: 100%;
     width: 100%;
     background-color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
 }
 
-body > .container {
-    width: 95%;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+#headerImage {
+    width: 100%;
+    height: 100%;
+}
+
+.img-shadow {
+    position: relative;
+    max-width: 100%;
+    float: left;
+}
+
+.img-shadow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 12px grey;
+    -moz-box-shadow: inset 0 0 12px grey;
+    -webkit-box-shadow: inset 0 0 12px grey;
+}
+
+.img-shadow img {
+    float: left;
 }
 
 md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+    background-color: white;
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#serviceBar {
+    background-color: #006bc3;
+    color: white;
+}
+
+#serviceContent  {
     background-color: white;
 }
 
@@ -21,9 +65,18 @@ md-nav-bar .md-nav-bar {
     background-color: white;
 }
 
+md-nav-item .md-ink-bar {
+    background-color: #bd0000;
+}
+
+.header-icon {
+    color: #006bc3;
+}
+
 #nav-logo {
     height: 120px;
     width: auto;
+    filter: drop-shadow(2px 2px 2px grey);
 }
 
 .row {
@@ -60,7 +113,6 @@ md-nav-bar .md-nav-bar {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-
 }
 
 .map-row-card {
@@ -80,3 +132,5 @@ md-nav-bar .md-nav-bar {
 form {
     padding: 2%;
 }
+
+
