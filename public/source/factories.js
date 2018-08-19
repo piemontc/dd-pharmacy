@@ -30,10 +30,10 @@ app.factory('Services', function() {
                 name: "Immunizations",
                 icon: "fas fa-syringe",
                 details: [
-                    "walk in & appointment",
-                    "travel vaccines for safer and more fun trip",
-                    "immunization records",
-                    "flu clinics",
+                    "Service by walk-in & appointment",
+                    "Travel vaccines for safer and more fun trip",
+                    "Immunization records",
+                    "Flu clinics",
                 ]
             },
         service2:
@@ -41,8 +41,8 @@ app.factory('Services', function() {
                 name: "Health Screening",
                 icon: "fas fa-briefcase-medical",
                 details: [
-                    "blood pressure & blood sugar check with counseling",
-                    "medication review"
+                    "Blood pressure & blood sugar check with counseling",
+                    "Medication review"
                 ]
             },
         service3:
@@ -56,7 +56,10 @@ app.factory('Services', function() {
         service4:
             {
                 name: "Curbside Service",
-                icon: "fas fa-car"
+                icon: "fas fa-car",
+                details: [
+                    "Don't leave the comfort of your car as your items are brought to you"
+                ]
             }
     }
     

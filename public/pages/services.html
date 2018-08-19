@@ -1,6 +1,6 @@
 <div class="container" style="padding-top: 20px">
         <div class="row" style="padding-top: 0px">
-            <div class="col-lg-6" ng-repeat="service in services.content">
+            <div class="col-lg-12" ng-repeat="service in services.content">
                 <md-card>
                     <md-toolbar class="md-primary" layout-padding layout-align="center center" id="serviceBar">
                         <h2>{{ service.name }}</h2>
@@ -9,8 +9,8 @@
 
                         <md-list>
                             <md-list-item class="md-3-line md-long-text" ng-repeat="details in service.details" ng-click="null">
-                                <div class="md-list-item-text" layout="column">
-                                    <p>{{ details }}</p>
+                                <div layout="column">
+                                    <p class="service-list-item">{{ details }}</p>
                                 </div>
                             </md-list-item>
                         </md-list>

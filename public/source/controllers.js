@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', '$location', 'Promos', 'Services', function($scope, $location, Promos, Services) {
+app.controller('mainController', ['$scope', '$location', 'Promos', 'Services', 'NgMap', function($scope, $location, Promos, Services, NgMap) {
 
     $scope.name = "D&D Pharmacy";
     $scope.token = "vbej9u2k"
@@ -24,6 +24,8 @@ app.controller('mainController', ['$scope', '$location', 'Promos', 'Services', f
                 Services.service4
             ]
     };
+    
+    $scope.googleMapsUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB8zR2oNiLn-EzjtMc4IvlIO4YOUER1Mf8";
 
     /*
         Handle nav inkbar

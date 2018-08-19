@@ -6,32 +6,36 @@
 <div class="container">
     <!-- first row : specials -->
     <div class="row">
-        <div layout="row" layout-align="center center" flex="100"><h1>{{ promos.title }}</h1></div>
-        <div layout="row" layout-align="center center" flex="100"><h2>{{ promos.slogan }}</h2></div>
+        <div layout="row" layout-align="center center" flex="100" class="section-title"><h1>{{ promos.title }}</h1></div>
     </div>
     <div class="row">
 
         <!-- Special 1 -->
         <div class="col-md-6">
-            <md-card class="promo-row-card">Special 1</md-card>
+            <md-card class="promo-row-card">
+                <h2 class="service-name">Prescription Delivery</h2>
+                <img id="delivery-image" src="img/car.jpg"/>
+            </md-card>
         </div>
 
         <!-- Special 2 -->
         <div class="col-md-6">
-            <md-card class="promo-row-card">Special 2</md-card>
+            <md-card class="promo-row-card">
+                <h2 class="service-name">Discount Programs</h2>
+                <img id="delivery-image" src="img/money.jpg"/>
+            </md-card>
         </div>
     </div>
 
     <!-- second row : services -->
     <div class="row">
-        <div layout="row" layout-align="center center" flex="100"><h1>{{ services.title }}</h1></div>
-        <div layout="row" layout-align="center center" flex="100"><h2>{{ services.slogan }}</h2></div>
+        <div layout="row" layout-align="center center" flex="100" class="section-title"><h1>{{ services.title }}</h1></div>
     </div>
     <div class="row">
         <!-- Service 1 -->
         <div class="col-lg-3 col-md-6" ng-repeat="service in services.content">
             <md-card class="service-row-card" md-whiteframe="{{ height }}" ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
-                <h3>{{ service.name }}</h3>
+                <h3 class="service-name">{{ service.name }}</h3>
                 <p class="icon"><i class="{{ service.icon }}"></i></p>
             </md-card>
         </div>
@@ -39,18 +43,31 @@
 
     <!-- third row : nav / hours -->
     <div class="row">
-        <div layout="row" layout-align="center center" flex="100"><h1>Directions & Hours</h1></div>
+        <div layout="row" layout-align="center center" flex="100" class="section-title"><h1>Directions & Hours</h1></div>
     </div>
     <div class="row">
 
         <!-- map -->
         <div class="col-md-6">
-            <md-card class="map-row-card">Map Here</md-card>
+            <md-card class="map-row-card">
+                <div map-lazy-load="https://maps.google.com/maps/api/js"
+                  map-lazy-load-params="{{googleMapsUrl}}">
+                  <ng-map id="map" center="35.2195843,-80.8044196" zoom="16" marker="true"></ng-map>
+                </div>
+                <p style="margin-top:5px;">
+                    2309 Central Ave<br/>
+                    Charlotte, NC 28205
+                </p>
+            </md-card>
         </div>
 
         <!-- hours -->
         <div class="col-md-6">
-            <md-card class="map-row-card">Hours Here</md-card>
+            <md-card class="map-row-card">
+                <div id="hours">
+                    
+                </div>
+            </md-card>
         </div>
     </div>
 </div>

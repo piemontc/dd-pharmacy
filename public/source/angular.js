@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages']);
+var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages', 'ngMap']);
 
 app.config(function ($routeProvider) {
 
@@ -68,6 +68,6 @@ app.config(function($mdThemingProvider) {
     });
 
     $mdThemingProvider.theme('default')
-        .accentPalette('ddAccentPalette')
+        .accentPalette('ddAccentPalette');
 
 });
